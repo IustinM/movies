@@ -42,7 +42,7 @@ const Movies =  () =>{
   
 
     return(
-        <div className="movies w-full">
+        <div className="movies w-full" id="movies">
 
             <h1 className="text-[3rem] text-white p-[3rem]">Popular Movies</h1>
         <div className="popular-movies w-full grid justify-items-center  grid-cols-auto gap-y-[5rem] gap-x-[0rem] items-center ">
