@@ -44,7 +44,7 @@ const Movies =  () =>{
     return(
         <div className="movies w-full" id="movies">
 
-            <h1 className="text-[3rem] text-white p-[3rem]">Popular Movies</h1>
+            <h1 className="text-[3rem] text-white p-[3rem] md:text-[1.5rem]">Popular Movies</h1>
         <div className="popular-movies w-full grid justify-items-center  grid-cols-auto gap-y-[5rem] gap-x-[0rem] items-center ">
            
            {data!.pages.map(page => 
@@ -56,7 +56,7 @@ const Movies =  () =>{
                     <button onClick={() => fetchNextPage()} className="bg-black hover:scale-[1.05] text-[#ffffff] text-[1.5rem] px-[0.7rem] py-[0.5rem] rounded-[1rem] transition-all">Load More</button>
                 </div>
 
-            <h1 className="text-[3rem] text-white p-[3rem]">Latest Movies</h1>
+            <h1 className="text-[3rem] text-white p-[3rem] md:text-[1.5rem]">Latest Movies</h1>
         <div className="upcoming-movies w-full grid justify-items-center  grid-cols-auto gap-y-[5rem] gap-x-[0rem] items-center ">
            
            {upcomingFetched.data!.pages.map(page =>
@@ -67,7 +67,7 @@ const Movies =  () =>{
                 <div className="button min-h-[10vh] flex justify-center items-center ">
                     <button onClick={() => upcomingFetched.fetchNextPage()} className="bg-black hover:scale-[1.05] text-[#ffffff] text-[1.5rem] px-[0.7rem] py-[0.5rem] rounded-[1rem] transition-all">Load More</button>
                 </div>
-                <h1 className="text-[3rem] text-white p-[3rem]">Top Rated Movies</h1>
+                <h1 className="text-[3rem] text-white p-[3rem] md:text-[1.5rem]">Top Rated Movies</h1>
         <div className="top-movies w-full grid justify-items-center  grid-cols-auto gap-y-[5rem] gap-x-[0rem] items-center ">
            {/* :) */}
            {topFetched.data!.pages.map(page =>

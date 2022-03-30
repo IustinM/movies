@@ -33,9 +33,9 @@ const TitleCarousel = () =>{
     return <div className="title-carousel flex w-full relative">
                  
                  <div style={ {backgroundImage: "url(\"https://image.tmdb.org/t/p/original" + bannerMovies[bannerNumber]+ "\")"} } className=" w-full carousel bg-center bg-cover bg-no-repeat min-h-[70vh]  text-white font-poppins flex items-end">
-                            <div className="text-carousel w-[40%] bg-[#00000059] rounded-[1rem] p-[1rem] m-[2rem]">
-                            <h1 className="title text-[3rem]">{data.results[bannerNumber].title}</h1>
-                        <p className="text-[1.5rem]">{data.results[bannerNumber].overview}</p>
+                            <div className="text-carousel w-[40%] bg-[#00000059] rounded-[1rem] p-[1rem] m-[2rem] md:w-full md:mb-[3.5rem]">
+                            <h1 className="title text-[3rem] md:text-[1.5rem]">{data.results[bannerNumber].title}</h1>
+                        <p className="text-[1.5rem] md:text-[1rem]">{data.results[bannerNumber].overview}</p>
 
                             </div>
                  </div> 

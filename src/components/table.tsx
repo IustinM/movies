@@ -1,7 +1,7 @@
 import React,{useMemo,useEffect} from "react";
 // import components
 import { useSortBy, useTable } from "react-table";
-
+// react responsive tav
 const Table = ({data}:{data:any}) => {
      
     const tableData:any = useMemo(() =>
@@ -41,7 +41,7 @@ const Table = ({data}:{data:any}) => {
   return (
     <div>
         <table>
-                <thead  className="border-[1px] border-black">
+                <thead  className="border-[1px] border-black md:hidden md:border-[0px]">
                     {headerGroups.map((headerGroup) => (
                         <tr  className="border-[1px] border-black" {...headerGroup.getHeaderGroupProps()}>
                                 {headerGroup.headers.map((column) => (
@@ -55,12 +55,12 @@ const Table = ({data}:{data:any}) => {
                         </tr>
                     ))}
                 </thead>
-                <tbody  className="border-[1px] border-black" {...getTableBodyProps}>
+                <tbody  className="border-[1px] border-black w-full" {...getTableBodyProps}>
                     {rows.map((row,idx) => {
                        
                         prepareRow(row)
                         return(
-                        <tr  className={ !isEven(idx) ? "border-[1px] border-[#0000006b] bg-[#9b1bce4b]" : "border-[1px] border-black" } {...row.getRowProps()}>
+                        <tr  className={ !isEven(idx) ? "border-[1px] border-[#0000006b] bg-[#9b1bce4b] md:flex md:flex-col md:w-full" : "border-[1px] border-black md:flex md:flex-col md:w-full" } {...row.getRowProps()}>
                                 {row.cells.map((cell) =>{
                                     return(
                                     <td className="border-[1px] border-black" {...cell.getCellProps()}>

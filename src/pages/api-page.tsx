@@ -1,6 +1,6 @@
 import React,{useMemo,useEffect} from "react";
 // import components
-import Table from "../components/table";
+import TableCont from "../components/table";
 import { useSortBy, useTable } from "react-table";
 import { useQuery } from "react-query";
 import Nav from "../components/nav";
@@ -25,7 +25,7 @@ const ApiPage = () =>{
         <div className="Api">
             <Nav/>
             <h1     >Api docs</h1>
-            <Table data={data}/>
+            <TableCont data={data}/>
             <div className="pagination"></div>
             
         </div>
