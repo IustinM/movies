@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 // import Components
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -37,7 +38,7 @@ const Contact = () => {
       };
     
     return(
-        <div className="contact bg-gradient-to-r from-[#7303c0] to-[#ec38bc] min-h-[100vh] w-full ">
+        <div className="contact bg-gradient-to-r from-[#7303c0] to-[#ec38bc] min-h-[100vh] w-full relative ">
             <Nav/>
             <div className="form flex justify-center  min-h-[40vh]  ">
 
@@ -74,6 +75,13 @@ const Contact = () => {
                     )
                 })}
             </div>
+            <div className="space pt-[3rem]"></div>
+            <div className="footer absolute bottom-0 w-full ">
+            <Footer/>
+
+            </div>
+
+            
         </div>
     )
 }

@@ -26,7 +26,7 @@ const ApiPage = () =>{
             <Nav/>
             <h1     >Api docs</h1>
             <TableCont data={data}/>
-            <div className="pagination"></div>
+           
             
         </div>
 
